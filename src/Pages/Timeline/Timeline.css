@@ -1,0 +1,117 @@
+.timeline-container {
+  padding-top: 10px; 
+  padding-bottom: 20px; 
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1400px;
+  margin: 80px auto 0;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.timeline-header h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.timeline-day {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.day-header {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.timeline-event {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--secondary-bg);
+  border-radius: var(--border-radius-md);
+  transition: transform var(--transition-fast);
+}
+
+.timeline-event:hover {
+  transform: translateX(10px);
+}
+
+.event-time {
+  min-width: 150px;
+  color: var(--accent-color);
+  font-weight: 600;
+  padding-right: var(--spacing-md);
+  border-right: 2px solid var(--accent-color);
+}
+
+.event-details {
+  flex: 1;
+}
+
+.event-details h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.event-location {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.location-icon {
+  font-size: 1.1rem;
+}
+
+.event-details p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-event {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .event-time {
+    border-right: none;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .timeline-event:hover {
+    transform: translateY(5px);
+  }
+}

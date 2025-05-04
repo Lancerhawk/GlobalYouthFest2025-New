@@ -1,0 +1,189 @@
+/* Tech-themed animated background styles */
+
+/* Base background with tech pattern */
+.tech-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--primary-bg);
+  overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 62, 143, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(0, 255, 157, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(26, 11, 46, 0.9) 0%, rgba(45, 27, 78, 0.95) 100%);
+  pointer-events: none;
+  animation: backgroundPulse 10s infinite alternate;
+}
+
+/* Grid pattern overlay */
+.tech-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 62, 143, 0.2) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 255, 157, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.15;
+  animation: gridPulse 8s infinite alternate;
+}
+
+/* Floating code elements */
+.floating-code {
+  position: absolute;
+  color: rgba(255, 62, 143, 0.25);
+  font-family: monospace;
+  user-select: none;
+  white-space: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0 8px rgba(0, 255, 157, 0.3);
+}
+
+/* Generate multiple floating code elements with different properties */
+.code-1 {
+  top: 10%;
+  left: 5%;
+  font-size: 14px;
+  animation: float-right 60s infinite linear;
+}
+
+.code-2 {
+  top: 30%;
+  right: 10%;
+  font-size: 12px;
+  animation: float-left 80s infinite linear;
+}
+
+.code-3 {
+  bottom: 15%;
+  left: 20%;
+  font-size: 16px;
+  animation: float-right 70s infinite linear;
+}
+
+.code-4 {
+  top: 60%;
+  right: 25%;
+  font-size: 10px;
+  animation: float-left 65s infinite linear;
+}
+
+.code-5 {
+  bottom: 40%;
+  left: 40%;
+  font-size: 18px;
+  animation: float-right 90s infinite linear;
+}
+
+/* Animated particles */
+.particle {
+  position: absolute;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+/* Generate multiple particles with different properties */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.5); opacity: 0.1; }
+}
+
+@keyframes float-right {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100vw); }
+}
+
+@keyframes float-left {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(-100%); }
+}
+
+/* Circuit lines */
+.circuit {
+  position: absolute;
+  background-color: rgba(126, 87, 194, 0.1);
+  animation: glow 8s infinite alternate;
+}
+
+.circuit-h {
+  height: 2px;
+  width: 100px;
+}
+
+.circuit-v {
+  width: 2px;
+  height: 100px;
+}
+
+.circuit-node {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(126, 87, 194, 0.2);
+  animation: glow 8s infinite alternate;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+@keyframes backgroundPulse {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(30deg); }
+}
+
+@keyframes gridPulse {
+  0% { opacity: 0.1; transform: scale(1); }
+  100% { opacity: 0.2; transform: scale(1.1); }
+}
+
+/* Binary rain effect (Matrix-like) */
+.binary-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.binary-column {
+  position: absolute;
+  top: -20%;
+  color: rgba(126, 87, 194, 0.15);
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  animation: binary-fall linear infinite;
+}
+
+@keyframes binary-fall {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100vh); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-grid {
+    background-size: 15px 15px;
+  }
+  
+  .floating-code {
+    font-size: 10px;
+  }
+  
+  .binary-column {
+    font-size: 10px;
+  }
+}
