@@ -8,7 +8,6 @@ import workshop from '../../assets/workshop.jpg';
 import tournament from '../../assets/tournament.jpg';
 import project from '../../assets/project-exhibition.jpg';
 import techTalks from '../../assets/techtalks.jpg';
-import hero from '/images/hero.mp4';
 
 
 const Home = () => {
@@ -17,7 +16,7 @@ const Home = () => {
     <div className="home-container">
       <div className="hero-section">
         <video className="hero-video" autoPlay muted loop playsInline>
-          <source src={hero} type="video/mp4"/>
+          <source src='/images/hero1.mp4' type="video/mp4"/>
         </video>
         <div className="hero-content">
           <div className="presentation-text">Baderia Global Institute of Engineering and Management</div>
